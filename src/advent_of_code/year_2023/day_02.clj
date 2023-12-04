@@ -11,10 +11,8 @@
 (defn split-input [parsed-input]
   (->> parsed-input
        (map #(re-seq #"\d" %))
-       (map rest)
-       (map (fn [seq-of-strings]
-              (map #(parse-long seq-of-strings)))))
-
+       (map (fn [collection]
+              (map parse-long collection)))))
 ;;; Part 1
 ;;; ============================================================================
 
