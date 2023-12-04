@@ -1,0 +1,1 @@
+["^ ","~$conway-step-fn",["^ ","~:row",3,"~:col",1,"~:fixed-arities",["~#set",[3]],"~:name","^0","~:ns","~$advent-of-code.year-2020.utils","~:top-ns","^7","~:arities",["^ ","~i3",["^ ","~:ret","~:fn","~:arglist-str","[neighbors becomes-active? stays-active?]"]],"~:type","^;"],"~:filename","/Users/adam-mcpherson/codebase/advent-of-code/src/advent_of_code/year_2020/utils.clj"]
