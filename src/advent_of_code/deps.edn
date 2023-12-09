@@ -1,0 +1,3 @@
+{:deps {dev.weavejester/medley {:mvn/version "1.5.0"}
+        org.clojure/core.logic {:mvn/version "1.0.1"}
+        org.clojure/core.match {:mvn/version "1.0.1"}}}
