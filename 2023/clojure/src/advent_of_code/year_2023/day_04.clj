@@ -25,34 +25,30 @@
         id (parse-long (re-find #"\d" id-string))
         [hand-string solution-string] (string/split input #"\|")
         hand (set (string-to-numbers hand-string))
-        solution (set (string-to-numbers solution-string))]
-    {:hand hand :solution solution :id id}))
+        solution (set (string-to-numbers solution-string))
+        winning-set (set/intersection hand solution)
+        count (count winning-set)]
+    {:wins count :id id :count 1}))
 
-(defn calculate-score [answer-set]
-  (let [count (count answer-set)]
+(defn calculate-score [count]
     (if (= count 0)
       0
-      (int (math/pow 2 (dec count))))))
+      (int (math/pow 2 (dec count)))))
 
 (defn answer-part-1 [parsed-input]
   (map (fn [input]
-         (let [card-map (parse-game input)
-                hand (:hand card-map)
-                solution (:solution card-map)
-               winning-set (set/intersection hand solution)]
-           (calculate-score winning-set)))
-       parsed-input)
-  )
+         (let [card-map (parse-game input)]
+           (calculate-score (card-map :wins))))
+       parsed-input))
 
 (def part-1-answer (apply + (answer-part-1 parsed-input)))
-part-1-answer
 
-;(assert (= part-1-answer 21158))
+(assert (= part-1-answer 21158))
 ;(assert (= part-1-answer 13))
 
 ;;; Part 2
 ;;; ============================================================================
-(def parsed-game (map #(parse-game %) parsed-input))
+(def parsed-game (mapv #(parse-game %) parsed-input))
 
 (defn take-n [s start count]
   (take count (drop start s)))
@@ -60,34 +56,21 @@ part-1-answer
 (defn get-n-games [start count]
   (take-n parsed-game start count))
 
-(defn count-matches [card-map]
-  ;; Function to count the number of matching numbers between hand and solution
-  ;; Implement the logic based on your game rules
-  (let [hand (:hand card-map)
-        solution (:solution card-map)
-        winning-set (set/intersection hand solution)
-        count (count winning-set)]
-    count
-  ))
+(defn update-counts [games i]
+  (reduce #(update-in %1 [%2 :count] + ((games i) :count))
+          games
+          (range (inc i) (+ (inc i) ((games i) :wins)))))
 
-(defn process-chunk [cards chunk-size]
-  (reduce (fn [[acc-cards acc-count] card]
-            (let [matches (count-matches card)
-                  new-cards (get-n-games (card :id) matches)]
-              [(into acc-cards new-cards) (inc acc-count)]))
-          [[] 0]
-          (take chunk-size cards)))
+(defn my-reducer [parsed-game]
+  (reduce (fn [games i]
+            (update-counts games i))
+          parsed-game
+          (range (count parsed-game))))
 
-(defn answer-part-2 [parsed-input chunk-size]
-  (loop [cards (map parse-game parsed-input)
-         count 0]
-    (if (empty? cards)
-      count
-      (let [[new-cards chunk-count] (process-chunk cards chunk-size)
-            remaining-cards (drop chunk-size cards)]
-        (recur (into remaining-cards new-cards) (+ count chunk-count))))))
+(defn answer-part-2 [parsed-game]
+  (apply + (map #(% :count) (my-reducer parsed-game))))
 
-(def part-2-answer (answer-part-2 parsed-input (count parsed-input)))
+(def part-2-answer (answer-part-2 parsed-game))
 
-;(assert (= part-2-answer part-2-answer))
-
+;(assert (= part-2-answer 30))
+(assert (= part-2-answer 6050769))
