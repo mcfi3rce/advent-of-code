@@ -1,0 +1,690 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Connecting ...
+; Reading port file: file:///Users/adam-mcpherson/codebase/advent-of-code/src/.nrepl-port ...
+; No nrepl port file found.
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+#'advent-of-code.year-2023.day-05/input
+clj꞉advent-of-code.year-2023.day-05꞉> 
+[10 14] [[1 4] [9 20]]
+nil
+clj꞉advent-of-code.year-2023.day-05꞉> 
+{:final-result [25 14], :intermediate-results [[9 30]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/wrapper-scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+[[9 30] [20 9]]
+[[25 14]]
+{:final-result [25 14], :intermediate-results [[9 30]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+[[9 30] [20 9]]
+[[25 14]]
+{:final-result [25 14], :intermediate-results [[9 30]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  20  seed-r:  30 source-l:  5  source-r:  9
+[[9 30] [20 9]]
+seed-l:  20  seed-r:  9 source-l:  5  source-r:  9
+[[25 14]]
+{:final-result [25 14], :intermediate-results [[9 30]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  20  seed-r:  30 source-l:  5  source-r:  9
+; Execution error (ClassCastException) at advent-of-code.year-2023.day-05/scan-range (REPL:133).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'bootstrap')
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  20  seed-r:  30 source-l:  5  source-r:  9
+[20 30]
+; Execution error (UnsupportedOperationException) at advent-of-code.year-2023.day-05/scan-range (REPL:128).
+; nth not supported on this type: Long
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  30 source-l:  5  source-r:  9
+[[1 4] [5 30]]
+seed-l:  5  seed-r:  30 source-l:  5  source-r:  9
+[[9 30] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+[[10 14]]
+{:final-result [10 14], :intermediate-results [[1 4] [9 30]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[[1 4] [5 4]]
+seed-l:  5  seed-r:  4 source-l:  5  source-r:  9
+[[10 9]]
+{:final-result [10 9], :intermediate-results [[1 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[1 4]
+; Execution error (UnsupportedOperationException) at advent-of-code.year-2023.day-05/scan-range (REPL:128).
+; nth not supported on this type: Long
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[1 4]
+; Execution error (UnsupportedOperationException) at advent-of-code.year-2023.day-05/scan-range (REPL:128).
+; nth not supported on this type: Long
+clj꞉advent-of-code.year-2023.day-05꞉> 
+clojure.lang.RT/nthFrom (RT.java:992)
+clojure.lang.RT/nth (RT.java:940)
+advent-of-code.year-2023.day-05/scan-range (NO_SOURCE_FILE:128)
+advent-of-code.year-2023.day-05/scan-range (NO_SOURCE_FILE:127)
+advent-of-code.year-2023.day-05/wrapper-scan-range (NO_SOURCE_FILE:149)
+advent-of-code.year-2023.day-05/wrapper-scan-range (NO_SOURCE_FILE:146)
+advent-of-code.year-2023.day-05/eval17682 (NO_SOURCE_FILE:167)
+clojure.lang.Compiler/eval (Compiler.java:7194)
+clojure.core/eval (core.clj:3215)
+clojure.core/eval (core.clj:3211)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:667)
+clojure.core/with-bindings* (core.clj:1990)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:218)
+nrepl.middleware.session/session-exec (session.clj:217)
+java.lang.Thread/run (Thread.java:1583)
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[1 4]
+; Execution error (UnsupportedOperationException) at advent-of-code.year-2023.day-05/scan-range (REPL:128).
+; nth not supported on this type: Long
+clj꞉advent-of-code.year-2023.day-05꞉> 
+clojure.lang.RT/nthFrom (RT.java:992)
+clojure.lang.RT/nth (RT.java:940)
+advent-of-code.year-2023.day-05/scan-range (NO_SOURCE_FILE:128)
+advent-of-code.year-2023.day-05/scan-range (NO_SOURCE_FILE:127)
+advent-of-code.year-2023.day-05/wrapper-scan-range (NO_SOURCE_FILE:149)
+advent-of-code.year-2023.day-05/wrapper-scan-range (NO_SOURCE_FILE:146)
+advent-of-code.year-2023.day-05/eval17684 (NO_SOURCE_FILE:167)
+clojure.lang.Compiler/eval (Compiler.java:7194)
+clojure.core/eval (core.clj:3215)
+clojure.core/eval (core.clj:3211)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:667)
+clojure.core/with-bindings* (core.clj:1990)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:218)
+nrepl.middleware.session/session-exec (session.clj:217)
+java.lang.Thread/run (Thread.java:1583)
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[1 4]
+; Execution error (UnsupportedOperationException) at advent-of-code.year-2023.day-05/scan-range (REPL:128).
+; nth not supported on this type: Long
+clj꞉advent-of-code.year-2023.day-05꞉> 
+; Syntax error compiling if at (src/advent_of_code/year_2023/day_05.clj:152:7).
+; Too many arguments to if
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/wrapper-scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[1 4]
+; Execution error (UnsupportedOperationException) at advent-of-code.year-2023.day-05/scan-range (REPL:128).
+; nth not supported on this type: Long
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[[1 4]]
+{:final-result [1 4], :intermediate-results []}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  5  seed-r:  10 source-l:  5  source-r:  9
+[[9 10] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+[[10 14]]
+{:final-result [10 14], :intermediate-results [[9 10]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  11  seed-r:  100 source-l:  5  source-r:  9
+[[11 100]]
+{:final-result [11 100], :intermediate-results []}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+; Syntax error compiling at (src/advent_of_code/year_2023/day_05.clj:163:8).
+; Unable to resolve symbol: final-results in this context
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+[[1 4]]
+{:final-result [1 4], :intermediate-results []}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+; Syntax error compiling at (src/advent_of_code/year_2023/day_05.clj:176:9).
+; Unable to resolve symbol: remaining-maps in this context
+clj꞉advent-of-code.year-2023.day-05꞉> 
+; Syntax error compiling at (src/advent_of_code/year_2023/day_05.clj:176:9).
+; Unable to resolve symbol: remaining-maps in this context
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+[[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+[[9 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+[[10 14]]
+[10 14] [[1 4] [9 20]]
+final results:  [[10 14]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+[[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+[[7 9]]
+[7 9] [[3 4]]
+final results:  [[10 14] [7 9]]
+seed-l:  3  seed-r:  4 source-l:  12  source-r:  29
+[[3 4]]
+[3 4] []
+final results:  [[10 14] [7 9] [3 4]]
+[[10 14] [7 9] [3 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> part-2-seeds
+[1 20]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+[[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+[[9 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+[[10 14]]
+[10 14] [[1 4] [9 20]]
+final results:  [[10 14]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+[[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+[[7 9]]
+[7 9] [[3 4]]
+final results:  [[10 14] [7 9]]
+seed-l:  3  seed-r:  4 source-l:  12  source-r:  29
+[[3 4]]
+[3 4] []
+final results:  [[10 14] [7 9] [3 4]]
+[[10 14] [7 9] [3 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+[[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+[[9 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+[[10 14]]
+final:  [10 14]  new-result:  [[1 4] [9 20]]
+final results:  [[10 14]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+[[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+[[7 9]]
+final:  [7 9]  new-result:  [[3 4]]
+final results:  [[10 14] [7 9]]
+seed-l:  3  seed-r:  4 source-l:  12  source-r:  29
+[[3 4]]
+final:  [3 4]  new-result:  []
+final results:  [[10 14] [7 9] [3 4]]
+[[10 14] [7 9] [3 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+[[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+[[9 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+[[10 14]]
+final:  [10 14]  new-result:  [[1 4] [9 20]] current: seed [1 20]
+final results:  [[10 14]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+[[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+[[7 9]]
+final:  [7 9]  new-result:  [[3 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+seed-l:  3  seed-r:  4 source-l:  12  source-r:  29
+[[3 4]]
+final:  [3 4]  new-result:  [] current: seed [3 4]
+final results:  [[10 14] [7 9] [3 4]]
+[[10 14] [7 9] [3 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> part-2-maps
+({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  4  seed-r:  4 source-l:  5  source-r:  9
+[[4 4]]
+{:final-result [4 4], :intermediate-results []}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/wrapper-scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  5  source-r:  9
+Result:  [[1 4]]
+{:final-result [1 4], :intermediate-results []}
+clj꞉advent-of-code.year-2023.day-05꞉> part-2-maps
+({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+{:final-result [7 9], :intermediate-results [[3 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+{:final-result [7 9], :intermediate-results [[3 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+{:final-result [7 9], :intermediate-results [[3 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/wrapper-scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+{:final-result [7 9], :intermediate-results [[3 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/wrapper-scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+{:final-result [7 9], :intermediate-results [[3 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+; Evaluating file: day_05.clj
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+final results:  []
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[9 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  new-result:  [[1 4] [9 20]] current: seed [1 20]
+final results:  [[10 14]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  new-result:  [[3 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+seed-l:  3  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  new-result:  [] current: seed [3 4]
+final results:  [[10 14] [7 9] [4 4]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+seed-l:  4  seed-r:  4 source-l:  5  source-r:  9
+Result:  [[5 4]]
+seed-l:  5  seed-r:  6 source-l:  5  source-r:  9
+Result:  [[10 11]]
+seed-l:  5  seed-r:  10 source-l:  5  source-r:  9
+Result:  [[9 10] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+seed-l:  11  seed-r:  100 source-l:  5  source-r:  9
+Result:  [[12 100]]
+{:final-result [12 100], :intermediate-results []}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[3 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+{:final-result [7 9], :intermediate-results [[3 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+{:final-result [7 9], :intermediate-results [[4 4]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  11  seed-r:  100 source-l:  5  source-r:  9
+Result:  [[11 100]]
+{:final-result [11 100], :intermediate-results []}
+clj꞉advent-of-code.year-2023.day-05꞉> part-2-maps
+({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+remaining maps:  ({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [ [5 [10 20]9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+remaining maps:  ({:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+remaining maps:  ({:source [12 29], :target [50 67]})
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+remaining maps:  ()
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+{:final-result [10 14], :intermediate-results [[10 20]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+[[10 20] [5 9]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+remaining maps:  ({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+remaining maps:  ({:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+remaining maps:  ({:source [12 29], :target [50 67]})
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+remaining maps:  ()
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+{:final-result [10 14], :intermediate-results [[10 20]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+remaining maps:  ({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  final-results:  []  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+remaining maps:  ({:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  final-results:  [[10 14]]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+remaining maps:  ({:source [12 29], :target [50 67]})
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  final-results:  [[10 14] [7 9]]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+remaining maps:  ()
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+[11 13]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+[9 24]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+[10 25]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+[[10 20] [5 9]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+#'advent-of-code.year-2023.day-05/wrapper-scan-range
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+remaining maps:  ({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [5 9], :target [10 14]}  c-seed:  [1 20]
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 20]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 9]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  final-results:  []  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+remaining maps:  ({:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 4]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 3]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  final-results:  [[10 14]]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+remaining maps:  ({:source [12 29], :target [50 67]})
+map:  {:source [12 29], :target [50 67]}  c-seed:  [4 4]
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  final-results:  [[10 14] [7 9]]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+remaining maps:  ()
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+; Evaluating file: day_05.clj
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+final results:  []
+remaining maps:  ({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [5 9], :target [10 14]}  c-seed:  [1 20]
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 20]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 9]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  final-results:  []  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+remaining maps:  ({:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 4]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 3]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  final-results:  [[10 14]]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+remaining maps:  ({:source [12 29], :target [50 67]})
+map:  {:source [12 29], :target [50 67]}  c-seed:  [4 4]
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  final-results:  [[10 14] [7 9]]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+remaining maps:  ()
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 4]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 3]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [4 4]
+seed-l:  4  seed-r:  4 source-l:  5  source-r:  9
+Result:  [[4 4]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 6]
+seed-l:  5  seed-r:  6 source-l:  5  source-r:  9
+Result:  [[10 11]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 10]
+seed-l:  5  seed-r:  10 source-l:  5  source-r:  9
+Result:  [[10 10] [5 9]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 9]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [11 100]
+seed-l:  11  seed-r:  100 source-l:  5  source-r:  9
+Result:  [[11 100]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 20]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 9]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+{:final-result [10 14], :intermediate-results [[10 20]]}
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+remaining maps:  ({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [5 9], :target [10 14]}  c-seed:  [1 20]
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 20]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 9]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  final-results:  []  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+remaining maps:  ({:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 4]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 3]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  final-results:  [[10 14]]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+remaining maps:  ({:source [12 29], :target [50 67]})
+map:  {:source [12 29], :target [50 67]}  c-seed:  [4 4]
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  final-results:  [[10 14] [7 9]]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+remaining maps:  ()
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+
+
+; Starte heree
+
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
+final results:  []
+remaining maps:  ({:source [5 9], :target [10 14]} {:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [5 9], :target [10 14]}  c-seed:  [1 20]
+seed-l:  1  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[1 4] [5 20]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 20]
+seed-l:  5  seed-r:  20 source-l:  5  source-r:  9
+Result:  [[10 20] [5 9]]
+map:  {:source [5 9], :target [10 14]}  c-seed:  [5 9]
+seed-l:  5  seed-r:  9 source-l:  5  source-r:  9
+Result:  [[10 14]]
+final:  [10 14]  final-results:  []  new-result:  [[1 4] [10 20]] current: seed [1 20]
+final results:  [[10 14]]
+remaining maps:  ({:source [1 3], :target [7 9]} {:source [12 29], :target [50 67]})
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 4]
+seed-l:  1  seed-r:  4 source-l:  1  source-r:  3
+Result:  [[4 4] [1 3]]
+map:  {:source [1 3], :target [7 9]}  c-seed:  [1 3]
+seed-l:  1  seed-r:  3 source-l:  1  source-r:  3
+Result:  [[7 9]]
+final:  [7 9]  final-results:  [[10 14]]  new-result:  [[4 4]] current: seed [1 4]
+final results:  [[10 14] [7 9]]
+remaining maps:  ({:source [12 29], :target [50 67]})
+map:  {:source [12 29], :target [50 67]}  c-seed:  [4 4]
+seed-l:  4  seed-r:  4 source-l:  12  source-r:  29
+Result:  [[4 4]]
+final:  [4 4]  final-results:  [[10 14] [7 9]]  new-result:  [] current: seed [4 4]
+final results:  [[10 14] [7 9] [4 4]]
+remaining maps:  ()
+[[10 14] [7 9] [4 4]]
+clj꞉advent-of-code.year-2023.day-05꞉> 
