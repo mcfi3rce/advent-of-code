@@ -62,7 +62,7 @@ const main = async () => {
         await day.Part1();
         await day.Part2();
         await day.Tests();
-
+        
         num++;
     }
 }
