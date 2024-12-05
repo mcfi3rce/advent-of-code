@@ -1,9 +1,9 @@
 import {readTextFile, readTextSample} from "../ReadInput";
 
-
+const day = __filename[__filename.length - 4].toString()
 export const Part1 = async () => {
     const start = performance.now();
-    const input = await readTextFile("5")
+    const input = await readTextFile(day)
     // const input = await readTextSample()
     
     const rulesAndOrder = input.trim().split("\n\n");
@@ -40,7 +40,7 @@ export const Part1 = async () => {
 
 export const Part2 = async () => {
     const start = performance.now();
-    const input = await readTextFile("5")
+    const input = await readTextFile(day)
     // const input = await readTextSample()
 
     const rulesAndOrder = input.trim().split("\n\n");

@@ -1,10 +1,10 @@
 import {readTextFile} from "../ReadInput";
 
-
+const day = __filename[__filename.length - 4].toString()
 export const Part1 = async () => {
     const start = performance.now()
     
-    const input = await readTextFile("1")
+    const input = await readTextFile(day)
     // const sample = await readTextSample()
     
     const arrayOne = [];
@@ -36,7 +36,7 @@ export const Part1 = async () => {
 export const Part2 = async () => {
     const start = performance.now()
     
-    const input = await readTextFile("1")
+    const input = await readTextFile(day)
 
     const set: Set<number> = new Set();
     const dictionary = new Map();
