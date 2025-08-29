@@ -39,6 +39,6 @@ public class Day03Tests
         var input = InputHelper.GetDay03Input();
         var result = _solution.Part2(input);
         // Add expected result once you know it
-        Assert.Equal("0", result);
+        Assert.Equal("82045421", result);
     }
 }

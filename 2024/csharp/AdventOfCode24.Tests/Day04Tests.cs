@@ -43,6 +43,6 @@ public class Day04Tests
         var input = InputHelper.GetDay04Input();
         var result = _solution.Part2(input);
         // Add expected result once you know it
-        Assert.Equal("0", result);
+        Assert.Equal("1960", result);
     }
 }
