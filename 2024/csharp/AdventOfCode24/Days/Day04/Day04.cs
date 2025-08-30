@@ -10,8 +10,9 @@ namespace AdventOfCode24.Days.Day04
             return Part1WithOutput(input, null);
         }
 
-        public string Part1WithOutput(string input, System.Action<string> outputWriter)
+        public string Part1WithOutput(string input, Action<string> outputWriter)
         {
+            OutputHelper.SetOutputWriter(outputWriter);
             var grid = input.Split('\n', StringSplitOptions.RemoveEmptyEntries)
                            .Select(line => line.ToCharArray())
                            .ToArray();
@@ -42,20 +43,18 @@ namespace AdventOfCode24.Days.Day04
                         {
                             count++;
                             var message = $"\n=== XMAS #{count} found ===\nLocation: ({row}, {col}) going {name}";
-                            outputWriter?.Invoke(message);
-                            Console.WriteLine(message);
+                            OutputHelper.WriteLine(message);
                             
                             var gridDisplay = GetWordInGrid(grid, row, col, dx, dy, target);
-                            outputWriter?.Invoke(gridDisplay);
-                            Console.WriteLine(gridDisplay);
+                            OutputHelper.WriteLine(gridDisplay);
                         }
                     }
                 }
             }
             
             var totalMessage = $"\nTotal XMAS found: {count}";
-            outputWriter?.Invoke(totalMessage);
-            Console.WriteLine(totalMessage);
+            OutputHelper.WriteLine(totalMessage);
+            OutputHelper.Clear();
             return count.ToString();
         }
 
