@@ -11,23 +11,23 @@ namespace AdventOfCode24.Days.Day07
     public class Day07 : ISolution
     {
         // Thread-safe cache for memoization
-        private static readonly ConcurrentDictionary<string, bool> _memoCache = new();
+        private readonly static ConcurrentDictionary<string, bool> MemoCache = new();
         private static long _cacheHits = 0;
 
         public static void ClearCache()
         {
-            _memoCache.Clear();
+            MemoCache.Clear();
             Interlocked.Exchange(ref _cacheHits, 0);
         }
         public string Part1(string input)
         {
             var stopwatch = Stopwatch.StartNew();
             
-            OutputHelper.WriteLineWithLevel($"CPU cores available: {Environment.ProcessorCount}", LogLevel.Info);
+            OutputHelper.WriteLineWithLevel($"CPU cores available: {Environment.ProcessorCount}");
             var lines = input.Split('\n', StringSplitOptions.RemoveEmptyEntries);
             var equations = ParseEquations(lines);
             
-            OutputHelper.WriteLineWithLevel($"Processing {equations.Count} equations...", LogLevel.Info);
+            OutputHelper.WriteLineWithLevel($"Processing {equations.Count} equations...");
             
             long totalCalibrationResult = 0;
             long processed = 0;
@@ -76,7 +76,7 @@ namespace AdventOfCode24.Days.Day07
             stopwatch.Stop();
             OutputHelper.WriteLineWithLevel($"Completed in {stopwatch.Elapsed.TotalSeconds:F2} seconds!", LogLevel.Result);
             OutputHelper.WriteLineWithLevel($"Found {validCount} valid equations with total calibration result: {totalCalibrationResult}", LogLevel.Result);
-            OutputHelper.WriteLineWithLevel($"Cache hits: {Interlocked.Read(ref _cacheHits)}, Cache size: {_memoCache.Count}", LogLevel.Result);
+            OutputHelper.WriteLineWithLevel($"Cache hits: {Interlocked.Read(ref _cacheHits)}, Cache size: {MemoCache.Count}", LogLevel.Result);
             return totalCalibrationResult.ToString();
         }
 
@@ -84,11 +84,11 @@ namespace AdventOfCode24.Days.Day07
         {
             var stopwatch = Stopwatch.StartNew();
             
-            OutputHelper.WriteLineWithLevel($"CPU cores available: {Environment.ProcessorCount}", LogLevel.Info);
+            OutputHelper.WriteLineWithLevel($"CPU cores available: {Environment.ProcessorCount}");
             var lines = input.Split('\n', StringSplitOptions.RemoveEmptyEntries);
             var equations = ParseEquations(lines);
             
-            OutputHelper.WriteLineWithLevel($"Processing {equations.Count} equations with 3 operators (+, *, ||)...", LogLevel.Info);
+            OutputHelper.WriteLineWithLevel($"Processing {equations.Count} equations with 3 operators (+, *, ||)...");
             
             long totalCalibrationResult = 0;
             long processed = 0;
@@ -116,7 +116,7 @@ namespace AdventOfCode24.Days.Day07
             
             Parallel.ForEach(equations, equation =>
             {
-                if (CanBeCalculatedWithThreeOperators(equation.target, equation.numbers))
+                if (CanBeCalculatedWithThreeOperators(equation.target, equation.numbers, true, true))
                 {
                     lock (lockObj)
                     {
@@ -137,7 +137,7 @@ namespace AdventOfCode24.Days.Day07
             stopwatch.Stop();
             OutputHelper.WriteLineWithLevel($"Completed in {stopwatch.Elapsed.TotalSeconds:F2} seconds!", LogLevel.Result);
             OutputHelper.WriteLineWithLevel($"Found {validCount} valid equations with total calibration result: {totalCalibrationResult}", LogLevel.Result);
-            OutputHelper.WriteLineWithLevel($"Cache hits: {Interlocked.Read(ref _cacheHits)}, Cache size: {_memoCache.Count}", LogLevel.Result);
+            OutputHelper.WriteLineWithLevel($"Cache hits: {Interlocked.Read(ref _cacheHits)}, Cache size: {MemoCache.Count}", LogLevel.Result);
             return totalCalibrationResult.ToString();
         }
 
@@ -150,7 +150,7 @@ namespace AdventOfCode24.Days.Day07
             if (useMemoization)
             {
                 string cacheKey = $"{target}:{string.Join(",", numbers)}";
-                if (_memoCache.TryGetValue(cacheKey, out bool cachedResult))
+                if (MemoCache.TryGetValue(cacheKey, out bool cachedResult))
                 {
                     Interlocked.Increment(ref _cacheHits);
                     OutputHelper.WriteLineWithLevel($"Cache HIT for {target}: [{string.Join(", ", numbers)}]", LogLevel.Debug);
@@ -220,7 +220,7 @@ namespace AdventOfCode24.Days.Day07
                     if (useMemoization)
                     {
                         string cacheKey = $"{target}:{string.Join(",", numbers)}";
-                        _memoCache.TryAdd(cacheKey, true);
+                        MemoCache.TryAdd(cacheKey, true);
                         OutputHelper.WriteLineWithLevel($"Cached result TRUE for {target}", LogLevel.Debug);
                     }
                     
@@ -233,7 +233,7 @@ namespace AdventOfCode24.Days.Day07
             if (useMemoization)
             {
                 string cacheKey = $"{target}:{string.Join(",", numbers)}";
-                _memoCache.TryAdd(cacheKey, false);
+                MemoCache.TryAdd(cacheKey, false);
                 OutputHelper.WriteLineWithLevel($"Cached result FALSE for {target}", LogLevel.Debug);
             }
             
