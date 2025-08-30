@@ -61,7 +61,8 @@ namespace AdventOfCode24.Days.Day07
                     {
                         totalCalibrationResult += equation.target;
                         validCount++;
-                        OutputHelper.WriteLineWithLevel($"Valid equation #{validCount}: {equation.target} can be calculated from [{string.Join(", ", equation.numbers)}]", LogLevel.Result);
+                        var currentProcessed = Interlocked.Read(ref processed);
+                        OutputHelper.WriteLineWithLevel($"Processed {currentProcessed} equations - Valid equation #{validCount}: {equation.target} can be calculated from [{string.Join(", ", equation.numbers)}]", LogLevel.Result);
                     }
                 }
                 
@@ -121,7 +122,8 @@ namespace AdventOfCode24.Days.Day07
                     {
                         totalCalibrationResult += equation.target;
                         validCount++;
-                        OutputHelper.WriteLineWithLevel($"Valid equation #{validCount}: {equation.target} can be calculated from [{string.Join(", ", equation.numbers)}]", LogLevel.Result);
+                        var currentProcessed = Interlocked.Read(ref processed);
+                        OutputHelper.WriteLineWithLevel($"Processed {currentProcessed} equations - Valid equation #{validCount}: {equation.target} can be calculated from [{string.Join(", ", equation.numbers)}]", LogLevel.Result);
                     }
                 }
                 

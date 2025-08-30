@@ -45,7 +45,7 @@ public class Day07Tests
 
         OutputHelper.SetLogLevel(LogLevel.Progress);
         // Add expected result once you know it
-        Assert.Equal("0", result);
+        Assert.Equal("227921760109726", result);
     }
 
     [Fact]
