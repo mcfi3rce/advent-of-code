@@ -190,7 +190,7 @@ namespace AdventOfCode24.Days.Day06
             }
             
             OutputHelper.WriteLine($"Visited positions so far: {visited.Count}");
-            Thread.Sleep(500); // Pause for visibility
+            // Thread.Sleep(500); // Pause for visibility
         }
 
         private char[][] CloneGrid(char[][] grid)
