@@ -12,7 +12,7 @@ public class Day09Tests
         var input = InputHelper.GetDay09Sample();
         var result = _solution.Part1(input);
         // Update with expected result when you know it
-        Assert.Equal("0", result);
+        Assert.Equal("1928", result);
     }
 
     [Fact]
@@ -21,7 +21,7 @@ public class Day09Tests
         var input = InputHelper.GetDay09Input();
         var result = _solution.Part1(input);
         // Add expected result once you know it
-        Assert.Equal("0", result);
+        Assert.Equal("6307275788409", result);
     }
 
     [Fact]
@@ -30,7 +30,7 @@ public class Day09Tests
         var input = InputHelper.GetDay09Sample();
         var result = _solution.Part2(input);
         // Update with expected result when you know it
-        Assert.Equal("0", result);
+        Assert.Equal("2858", result);
     }
 
     [Fact]
@@ -39,6 +39,6 @@ public class Day09Tests
         var input = InputHelper.GetDay09Input();
         var result = _solution.Part2(input);
         // Add expected result once you know it
-        Assert.Equal("0", result);
+        Assert.Equal("6327174563252", result);
     }
 }
