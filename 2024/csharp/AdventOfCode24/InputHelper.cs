@@ -62,8 +62,10 @@ namespace AdventOfCode24
 
         // Day 10
         public static string GetDay10Sample() => GetDayInput(10, true);
+        public static string GetDay10Sample(int sampleNumber) => GetDayInput(10, true, sampleNumber);
         public static string GetDay10Input() => GetDayInput(10, false);
         public static string[] GetDay10SampleLines() => GetDayInputLines(10, true);
+        public static string[] GetDay10SampleLines(int sampleNumber) => GetDayInputLines(10, true, sampleNumber);
         public static string[] GetDay10InputLines() => GetDayInputLines(10, false);
 
         // Day 11
@@ -156,9 +158,18 @@ namespace AdventOfCode24
         public static string[] GetDay25SampleLines() => GetDayInputLines(25, true);
         public static string[] GetDay25InputLines() => GetDayInputLines(25, false);
 
-        private static string GetDayInput(int day, bool useSample)
+        private static string GetDayInput(int day, bool useSample, int? sampleNumber = null)
         {
-            var fileName = useSample ? "sample.txt" : "input.txt";
+            string fileName;
+            if (useSample)
+            {
+                fileName = sampleNumber.HasValue ? $"sample{sampleNumber.Value}.txt" : "sample.txt";
+            }
+            else
+            {
+                fileName = "input.txt";
+            }
+            
             var dayFolder = $"Day{day:D2}";
             var basePath = GetBasePath();
             var filePath = Path.Combine(basePath, "Days", dayFolder, fileName);
@@ -172,9 +183,9 @@ namespace AdventOfCode24
             return File.ReadAllText(filePath).Trim();
         }
 
-        private static string[] GetDayInputLines(int day, bool useSample)
+        private static string[] GetDayInputLines(int day, bool useSample, int? sampleNumber = null)
         {
-            return GetDayInput(day, useSample)
+            return GetDayInput(day, useSample, sampleNumber)
                 .Split('\n', StringSplitOptions.RemoveEmptyEntries)
                 .Select(line => line.TrimEnd('\r'))
                 .ToArray();
