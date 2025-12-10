@@ -36,8 +36,10 @@
    - p/words, p/comma-separated
    - See parsing.clj for full list"
   [input]
-  ;; TODO: Implement parsing logic
-  input)
+  (->> input
+       (p/comma-separated)
+       (map #(str/split % #"-"))
+       (map (fn [[a b]] [(parse-long a) (parse-long b)]))))
 
 ;; ============================================================================
 ;; Helper Functions
@@ -61,6 +63,18 @@
 ;; ============================================================================
 ;; Part 1
 ;; ============================================================================
+ (defn equal-halves?
+   "Check if a number's two halves are equal"
+   [n]
+   (let [s (str n)
+         mid (/ (count s) 2)]
+     (= (subs s 0 mid)
+        (subs s mid))))
+
+(defn even-digit-count?
+  "Check if a number has an even number of digits"
+  [n]
+  (-> n str count even?))
 
 (defn part1
   "Solve part 1 of the puzzle.
@@ -77,8 +91,12 @@
    - Accumulating: (reduce combine initial data)
    - Grid navigation: Use u/neighbors, u/find-in-grid"
   [parsed-input]
-  ;; TODO: Implement part 1 solution
-  nil)
+  (->> parsed-input
+   (mapcat (fn [[a b]] (range a (inc b))))
+   (filter even-digit-count?)
+   (filter equal-halves?)
+   (apply +)
+   ))
 
 ;; ============================================================================
 ;; Part 2
@@ -98,8 +116,10 @@
    - Check if there's a mathematical pattern
    - Use cycle detection for repeated states"
   [parsed-input]
-  ;; TODO: Implement part 2 solution
-  nil)
+   (->> parsed-input
+   (mapcat (fn [[a b]] (range a (inc b))))
+   (apply +)
+   ))
 
 ;; ============================================================================
 ;; Main
