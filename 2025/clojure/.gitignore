@@ -1,0 +1,10 @@
+target/
+.lein-*
+.nrepl-port
+.cpcache/
+*.class
+*.jar
+*.log
+.DS_Store
+/.clj-kondo/
+/.lsp/
