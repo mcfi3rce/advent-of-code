@@ -1,0 +1,25 @@
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.iml
+*.DotSettings.user
+.#*
+
+# Build output
+build/
+.gradle/
+bin/
+obj/
+target/
+node_modules/
+.clj-kondo/.cache/
+.lsp/.cache/
+.cpcache/
+.nrepl-port
+
+# Puzzle inputs: AoC asks that these not be published
+inputs/
+*_input.txt
+input.txt
+AdventInputDay[0-9]*.txt
