@@ -20,6 +20,20 @@ public class Day01 implements Day {
 
     @Override
     public String part2(String input) {
-        return ""; 
+        var level = 0;
+        var exit = 1;
+        for (char parens : input.toCharArray()) {
+            if (parens == '('){
+                level++;
+            }
+            else{
+                level--;
+            }
+            if (level < 0){
+                return String.valueOf(exit);
+            }       
+            exit++;
+        }
+        return String.valueOf(exit);
     }
 }
