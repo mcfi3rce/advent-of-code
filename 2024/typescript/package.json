@@ -1,0 +1,14 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --solveOne"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.10.0"
+  }
+}
