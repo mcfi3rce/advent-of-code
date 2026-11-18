@@ -14,4 +14,4 @@ Puzzle inputs are gitignored. Put your own input files where each project expect
 
 ## History
 Each folder was imported with its full git history from its original repo:
-`aoc-2015-java` (local), `mcfi3rce/advent-of-code`, `mcfi3rce/AOC24-C-`, `mcfi3rce/Advent-of-Code-24`, `mcfi3rce/aoc25`.
+`aoc-2015-java` (local), `mcfi3rce/advent-of-code-clojure`, `mcfi3rce/AOC24-C-`, `mcfi3rce/Advent-of-Code-24`, `mcfi3rce/aoc25`.
